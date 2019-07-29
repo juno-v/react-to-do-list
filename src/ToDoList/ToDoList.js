@@ -78,12 +78,12 @@ class App extends Component {
                   <ul>
                     <li>
                       {task}
+                      <button
+                      value={index}
+                      onClick={this.deleteTask}
+                      > Delete </button>
                     </li>
                   </ul>
-                  <button
-                  value={index}
-                  onClick={this.deleteTask}
-                  > Delete </button>
                 </div> 
               )
             })}
