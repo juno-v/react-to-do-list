@@ -29,7 +29,10 @@ class App extends Component {
   // ES6 function arrow function 
   // you can name functions whatever you want it to be, 
   // just make sure the name makes sense
-  addTask = () => {
+  addTask = (event) => {
+    // a form submission automatically refreshes, we don't want that to happen
+    // or we will lose the data
+    event.preventDefault(); 
     // test functionality with console.logs to see if it works 
     // must open DOM console to see it
 
@@ -93,16 +96,21 @@ class App extends Component {
               {taskList}
             </ol>
 
-            {/* make the value state, explain why */}
-            <input 
-            className="taskInputField"
-            onChange={this.handleTaskChange}
-            type="text" placeholder="task" value={this.state.task}/> 
+            <form onSubmit={this.addTask}>
+              <label>
+              {/* make the value state, explain why */}
+              <input 
+              className="taskInputField"
+              onChange={this.handleTaskChange}
+              type="text"
+              value={this.state.task}/> 
+              </label>
+            </form>
 
             {/* have to write this.function name to refer to the function in this component */}
             <button 
             className="addTaskButton"
-            onClick={this.addTask}> Add Task </button>
+            > Add Task </button>
 
             <br/> 
             {/* test to see something */}
