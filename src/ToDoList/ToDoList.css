@@ -23,3 +23,20 @@
     margin-right: 30px;
 }
 
+.taskInputField {
+    height: 20px; 
+    width: 400px; 
+}
+
+.deleteTaskButton {
+    height: 20px; 
+    width: 50px; 
+    margin-left: 5px; 
+}
+
+.addTaskButton {
+    height: 20px; 
+    width: 70px; 
+    margin-left: 5px; 
+}
+

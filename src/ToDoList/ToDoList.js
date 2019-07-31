@@ -75,6 +75,7 @@ class App extends Component {
             <li>
               {task}
               <button
+              className="deleteTaskButton"
               value={index}
               onClick={this.deleteTask}
               > Delete </button>
@@ -94,11 +95,14 @@ class App extends Component {
 
             {/* make the value state, explain why */}
             <input 
+            className="taskInputField"
             onChange={this.handleTaskChange}
             type="text" placeholder="task" value={this.state.task}/> 
 
             {/* have to write this.function name to refer to the function in this component */}
-            <button onClick={this.addTask}> Add Task </button>
+            <button 
+            className="addTaskButton"
+            onClick={this.addTask}> Add Task </button>
 
             <br/> 
             {/* test to see something */}
