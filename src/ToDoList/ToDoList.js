@@ -81,7 +81,7 @@ class App extends Component {
             </li>
         </div> 
       )
-    })
+    }); 
 
     return (
       <div className="listContainer" >
