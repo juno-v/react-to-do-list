@@ -2,6 +2,8 @@
     background-color: blue;
     border-style: 2px solid; 
     text-align: center; 
+    /* removes white space */
+    overflow: hidden
 }
 
 .listDiv {
