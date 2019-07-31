@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+// import style sheet to use
+import "./ToDoList.css"
+
 class App extends Component {
 
   // what is state? 
@@ -66,27 +69,28 @@ class App extends Component {
   render() {
 
     let tasks = this.state.taskList;
+    let taskList = tasks.map((task, index)=> {
+      return (
+        <div className="taskDiv" key={index}> 
+            <li>
+              {task}
+              <button
+              value={index}
+              onClick={this.deleteTask}
+              > Delete </button>
+            </li>
+        </div> 
+      )
+    })
 
     return (
-      <div>
-          <div>
-            <h1> To Do List </h1>
+      <div className="listContainer" >
+        <h1> To Do List </h1>
+            <div className="listDiv">
 
-            {tasks.map((task, index)=> {
-              return (
-                <div key={index}> 
-                  <ul>
-                    <li>
-                      {task}
-                      <button
-                      value={index}
-                      onClick={this.deleteTask}
-                      > Delete </button>
-                    </li>
-                  </ul>
-                </div> 
-              )
-            })}
+            <ol>
+              {taskList}
+            </ol>
 
             {/* make the value state, explain why */}
             <input 
@@ -99,8 +103,7 @@ class App extends Component {
             <br/> 
             {/* test to see something */}
             {/* {JSON.stringify(this.state.taskList)} */}
-
-          </div>
+            </div>
       </div>
     );
   }
