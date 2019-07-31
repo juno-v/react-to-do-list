@@ -109,6 +109,7 @@ class App extends Component {
 
             {/* have to write this.function name to refer to the function in this component */}
             <button 
+            onClick={this.addTask}
             className="addTaskButton"
             > Add Task </button>
 
