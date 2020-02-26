@@ -8,12 +8,26 @@ import React, { Component } from 'react';
 class ComponentExample extends Component { // the ComponentExample will be the name of the file, and it will match the export in line 14. 
                                             // you want to export your component so it can be used elsewhere. 
 
+/*  in the class component, the first thing you should see will be a state object, (object is represented by curly braces -<> {} ) an example is found in ToDoList.js*/
 /* 
-- in this space you write your functions, there isn't a specific format. 
+
+
+
+- in this space you write your functions.
 just remember to name them something meaningful and not just something like tacos. 
 - write in ES6 format: 
+
 functionName = () => {
     ---- write your code in these code blocks
+}
+
+// these functions are later used in the return section. disregard at first 
+functionName = (event) => {
+    console.log(event.target.value)
+}
+
+functionName = (event) => {
+    console.log(event.taget.value)
 }
 */
 
@@ -29,7 +43,7 @@ functionName = () => {
         - how do I write it? attempt it below after this comment box. 
         */
 
-        
+
 
 
         return (
