@@ -31,6 +31,10 @@ functionName = (event) => {
 }
 */
 
+click = () => {
+    console.log(`click!`)
+}
+
 
     render() {
 
@@ -57,7 +61,9 @@ functionName = (event) => {
                 utilize event handlders such as onClick and onChange 
                 */}
 
+                <h1> HELLO WORLD. do you see me? </h1>
 
+                <button onClick={this.click}> OPEN CONSOLE, then click me. </button>
                 
             </div>
         );
